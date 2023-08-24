@@ -1,0 +1,63 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000000;
+}
+
+.loader {
+    height: 25px;
+    background-color: #CCC;
+    position: relative;
+}
+
+.progress-bar {
+    position: absolute;
+   height: 100%;
+   background-color: #0fd439;
+   animation: progress-animation 5s infinite;
+}
+
+@keyframes progress-animation{
+    0% { width: 0%; } 
+    100% { width: 100%}
+}
+
+.progress-bar-inner {
+    width: 0;
+    height: 100%;
+    background-color: #3498db;
+}
+
+.icon {
+    width: 200px;
+    height: 200px;
+    background-image: url('img/marioLoad.gif');
+    background-size: cover;
+    margin-top: -120%;
+    margin-left: -15%;
+}
+
+
+.transition {
+    width: 100%;
+    height: 100%;
+    background-color: #3498db;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    opacity: 0;
+    animation: fade 5s ease-in-out forwards;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
